@@ -1,0 +1,5 @@
+"""共通で使う定数の設定"""
+
+DEVELOPER_KEY = 'YOUR API KEY'
+YOUTUBE_API_SERVICE_NAME = 'youtube'
+YOUTUBE_API_VERSION = 'v3'
