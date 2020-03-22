@@ -62,7 +62,7 @@ if __name__ == '__main__':
       # 配信予定枠が見つからなかったら1時間後に再検索する(5時以降はしない)
       nowtime = datetime.datetime.strptime(((datetime.datetime.now()+datetime.timedelta(hours=1)).strftime('%H:%M:%S')), '%H:%M:%S')
       threstime = datetime.datetime.strptime('05:00:00', '%H:%M:%S')
-      if nowtime > threstime:
+      if nowtime < threstime:
         p = subprocess.Popen(['at', 'now + 1hours'], stdin=subprocess.PIPE)
         command = '%sbooking.py' % EXEC_PATH
         p.communicate(command.encode('utf-8'))
